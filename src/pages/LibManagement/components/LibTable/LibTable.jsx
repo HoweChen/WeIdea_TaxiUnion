@@ -49,12 +49,9 @@ export default function LibTable () {
     fetchData(current);
   };
 
-  const handleBorrowClick = () => {
-    Message.success("借阅成功");
-  };
 
   const handleDetailClick = () => {
-    Message.success({
+    Message.warning({
       title: "暂无详细信息",
       size: "large",
     });
@@ -70,13 +67,6 @@ export default function LibTable () {
         <Button className={styless.marginRight}
                 onClick={handleDetailClick}>
           查看
-        </Button>
-        <Button
-          type="primary"
-          className={styles.borrowButton}
-          onClick={handleBorrowClick}
-        >
-          借阅
         </Button>
       </div>
     );
@@ -163,7 +153,7 @@ export default function LibTable () {
     },
     {
       label: "图书分类",
-      component: "Input",
+      component: "Dropdown",
       componnetProps: {
         placeholder: "请选择",
         options: [
