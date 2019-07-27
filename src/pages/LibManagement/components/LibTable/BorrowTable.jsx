@@ -5,9 +5,14 @@ import styles from "./index.module.scss";
 import { Button } from "@alifd/next";
 import styless from "./LibTable.module.scss";
 
+// const axios = require("axios");
+
 // MOCK 数据，实际业务按需进行替换
 const getData = () => {
-  return Array.from({length: 11}).map((item, index) => {
+  // let test = axios.get("./driver.json");
+  const drivers = require("./driver.json");
+  console.log(drivers);
+  let result = Array.from({length: 11}).map((item, index) => {
     return {
       number: `${index}`,
       isbn: `1000${index}`,
@@ -19,6 +24,9 @@ const getData = () => {
       returnDate: "2019-10-01",
     };
   });
+  // console.log(result);
+  // return result;
+  return drivers.drivers;
 };
 
 export default function BorrowTable () {

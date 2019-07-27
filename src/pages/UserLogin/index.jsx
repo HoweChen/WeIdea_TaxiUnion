@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { withRouter, Link } from 'react-router-dom';
-import { Input, Button, Checkbox, Grid, Message } from '@alifd/next';
+import React, { useState } from "react";
+import { Link, withRouter } from "react-router-dom";
+import { Button, Checkbox, Grid, Input, Message } from "@alifd/next";
 import {
-  FormBinderWrapper as IceFormBinderWrapper,
   FormBinder as IceFormBinder,
+  FormBinderWrapper as IceFormBinderWrapper,
   FormError as IceFormError,
-} from '@icedesign/form-binder';
-import IceIcon from '@icedesign/foundation-symbol';
-import styles from './index.module.scss';
+} from "@icedesign/form-binder";
+import IceIcon from "@icedesign/foundation-symbol";
+import styles from "./index.module.scss";
 
 const { Row, Col } = Grid;
 
@@ -33,7 +33,8 @@ const UserLogin = (props) => {
       }
       console.log(values);
       Message.success('登录成功');
-      props.history.push('/');
+      console.log(props);
+      props.history.push("/dashboard?user=" + values.username);
     });
   };
 

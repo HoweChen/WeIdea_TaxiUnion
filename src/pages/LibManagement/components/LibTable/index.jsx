@@ -1,9 +1,9 @@
-import React from 'react';
-import IceContainer from '@icedesign/container';
-import { Tab } from '@alifd/next';
-import LibTable from './LibTable';
-import BorrowTable from './BorrowTable';
-import styles from './index.module.scss';
+import React from "react";
+import IceContainer from "@icedesign/container";
+import { Tab } from "@alifd/next";
+import LibTable from "./LibTable";
+import BorrowTable from "./BorrowTable";
+import styles from "./index.module.scss";
 
 const TabPane = Tab.Item;
 
